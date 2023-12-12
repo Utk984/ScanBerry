@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background shape with rounded top corners -->
+    <item>
+        <shape>
+            <solid android:color="#E6E5E5" /> <!-- Set the background color -->
+            <corners
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp" />
+        </shape>
+    </item>
+
+    <!-- Padding -->
+    <item android:left="8dp" android:right="8dp" android:top="8dp" >
+        <shape>
+            <solid android:color="#FFFFFF" /> <!-- Set the background color -->
+            <corners
+                android:topLeftRadius="20dp"
+                android:topRightRadius="20dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp" />
+        </shape>
+    </item>
+</layer-list>
+

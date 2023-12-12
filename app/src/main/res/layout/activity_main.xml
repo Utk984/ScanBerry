@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="ScanBerry"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-12dp"
+        android:paddingHorizontal="12dp"
+        android:layout_marginBottom="-80dp"
+        android:tint="#E6E5E5"
+        app:srcCompat="@drawable/rounded_image_file"
+        tools:ignore="UseAppTint" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/rounded_image_file"
+        android:clickable="true"
+        android:onClick="work" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView"
+        android:paddingBottom="70dp"
+        android:clickable="true"
+        android:layout_marginTop="35dp"
+        android:onClick="work"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/baseline_photo_camera_24" />
+
+
+    <TextView
+        android:id="@+id/capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="35dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="work"
+        android:text="CAPTURE"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/classified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_alignStart="@+id/imageView5"
+        android:layout_alignBottom="@+id/imageView5"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Classified as:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_alignEnd="@+id/imageView5"
+        android:layout_alignBottom="@+id/imageView5"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/Linear"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_alignStart="@+id/imageView5"
+        android:tint="#E6E5E5"
+        android:textColor="@color/black"
+        app:srcCompat="@drawable/rounded_image_file"
+        tools:ignore="UseAppTint" />
+
+
+    <TextView
+        android:id="@+id/confidencesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView6"
+        android:layout_alignTop="@+id/imageView6"
+        android:layout_alignEnd="@+id/imageView6"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Confidences"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/con_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confidencesText"
+        android:layout_alignStart="@+id/imageView6"
+        android:layout_alignBottom="@+id/imageView6"
+        android:paddingLeft="12dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/con_per"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="12dp"
+        android:layout_below="@+id/confidencesText"
+        android:layout_alignEnd="@+id/imageView6"
+        android:gravity="right|center_vertical"
+        android:layout_alignBottom="@+id/imageView6"
+        android:text=""
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/Linear"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toEndOf="@+id/imageView6"
+        android:tint="#E6E5E5"
+        app:srcCompat="@drawable/rounded_image_file"
+        tools:ignore="UseAppTint" />
+
+    <TextView
+        android:id="@+id/InfoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_alignEnd="@+id/imageView7"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Nutritional Info"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/InfoText"
+        android:layout_alignStart="@+id/imageView7"
+        android:layout_alignEnd="@+id/imageView7"
+        android:layout_alignBottom="@+id/imageView7"
+        android:gravity="center"
+        android:text=""
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView5"
+        android:paddingTop="80dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/accurate"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:backgroundTint="#A4E1A4"
+            android:text="Accurate"
+            android:textColor="@color/black"
+            android:clickable="true"
+            android:gravity="center"
+            android:background="@drawable/rounded_image_file"
+            tools:ignore="UseAppTint" />
+
+        <TextView
+            android:id="@+id/faulty"
+            android:clickable="true"
+            android:text="Incorrect"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_weight="1"
+            android:backgroundTint="#F38E8E"
+            android:background="@drawable/rounded_image_file"
+            tools:ignore="UseAppTint" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView6"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:id="@+id/Linear3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="6dp"
+            android:backgroundTint="#E6E5E5"
+            android:background="@drawable/rounded_image_file">
+
+            <TextView
+                android:id="@+id/manual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Manual Checks"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/check"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left|center_vertical"
+                android:text=""
+                android:layout_marginHorizontal="12dp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Linear4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="6dp"
+            android:backgroundTint="#E6E5E5"
+            android:background="@drawable/rounded_image_file">
+
+            <TextView
+                android:id="@+id/consume"
+                android:paddingHorizontal="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Consume Within"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginBottom="6dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
